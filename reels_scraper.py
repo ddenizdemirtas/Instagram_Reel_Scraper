@@ -18,12 +18,12 @@ def add_reels_to_queue(username: str, password: str, num_reels: int = 100) -> No
 
         options = uc.ChromeOptions()
         options.add_argument("--headless")
-        driver = uc.Chrome()
+        driver = uc.Chrome(options=options)
         instagram_url = "https://www.instagram.com/accounts/login/?__coig_restricted=1"
         driver.get(instagram_url)
 
         wait = WebDriverWait(driver=driver, timeout=3000)
-        get_url = driver.current_urle
+        get_url = driver.current_url
         wait.until(EC.url_to_be(instagram_url))
 
         if get_url == instagram_url:
