@@ -101,8 +101,8 @@ def add_reels_to_queue(username: str, password: str, num_reels: int = 100) -> No
 
 
 if __name__ == "__main__":
-    add_reels_to_queue(username="burner3deniz1",
-                       password="q1.w2.e3.", num_reels=10000)
+    add_reels_to_queue(username=<<username>>,
+                       password="<<password>>", num_reels=10000)
     print("\n\nURL Queue:\n", reel_url_queue)
     try:
         with open('example.txt', 'w') as file:
